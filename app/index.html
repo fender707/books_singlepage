@@ -9,7 +9,7 @@
   <script src="js/controllers.js"></script>
 </head>
 <body ng-controller="StoreController as store">
-<div id="main" ng-app>
+  <div id="main">
 	<!-- The navigation menu will get the value of the "active" variable as a class.
 		 The $event.preventDefault() stops the page from jumping when a link is clicked. -->
 
@@ -29,7 +29,7 @@
 
 	<p ng-hide="active">Please click a menu item</p>
 	<p ng-show="active">You chose <b>{{active}}</b></p>
-</div>
+  </div>
   <h1>Books Reviewer</h1>
       <div class="menu" ng-repeat="product in store.products">
         <img ng-src="{{product.images}}"/>
@@ -56,8 +56,8 @@
       {{review.body}}
       <cite>by: {{review.author}}</cite>
     </blockquote>
-      <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
-    <div class="form-group">
+    <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
+      <div class="form-group">
         <select ng-model="reviewCtrl.review.stars">
           <option value="1">1 star</option>
 	  <option value="2">2 stars</option>
@@ -69,8 +69,8 @@
         <label>by:</label>
         <input ng-model="reviewCtrl.review.author" type="email" class="form-control" /></br>
         <input type="submit" value="Submit" />
-     </div>
-      </form>
+       </div>
+     </form>
 
   </div>
   </section>
