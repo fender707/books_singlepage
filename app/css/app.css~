@@ -16,3 +16,15 @@
 .reviewHistory {
    margin: 2;
 }
+
+.inline_h4 {
+  display: inline;
+}
+
+.menu h4 {
+  padding-bottom: 4px;  
+}
+
+.menu h5 {
+  padding-bottom: 6px;  
+}
