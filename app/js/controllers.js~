@@ -1,0 +1,95 @@
+'use strict';
+
+/* Controllers */
+  
+  var app = angular.module('store', []);
+
+  app.controller('StoreController', function() {
+    this.products = gems;
+  });
+ 
+  app.controller("PanelController", function(){
+    this.tab = 1;
+
+  this.selectTab = function(setTab) {
+    this.tab = setTab;
+  };
+
+  this.isSelected = function(checkTab) {
+    return this.tab === checkTab;
+  };
+
+  });
+
+  app.controller("ReviewController", function() {
+    this.review = {};
+
+  this.addReview = function(product) {
+    product.reviews.push(this.review);
+  };
+
+  });  
+
+    var gems = [{
+      name: 'White Fang',
+      author: 'Jack London',
+      rating: "5/5",
+      description: "White Fang is a novel by American author Jack London (1876–1916) — and the name of the book's eponymous character, a wild wolfdog. First serialized in Outing magazine, it was published in 1906. The story takes place in Yukon Territory, Canada, during the 1890s Klondike Gold Rush and details White Fang's journey to domestication. It is a companion novel (and a thematic mirror) to London's best-known work, The Call of the Wild, which is about a kidnapped, domesticated dog embracing his wild ancestry to survive and thrive in the wild.",
+      images:  'img/London.jpg' ,
+      reviews: [
+      {
+         stars: 5,
+         body: "I love this book!",
+         author: "fender707@rambler.ru"
+      },
+      {
+         stars: 4,
+         body: "So Nice book!",
+         author: "fender707@rambler.gu"
+      }
+    ]
+    },
+
+    { name: 'John Barley Corn',
+      author: 'Jack London',
+      rating: '4/5',
+      description: 'John Barleycorn is an autobiographical novel by Jack London dealing with his enjoyment of drinking and struggles with alcoholism. It was published in 1913. The title is taken from the British folksong "John Barleycorn".',
+      images: 'img/London1.jpg',
+      reviews: [
+      {
+         stars: 5,
+         body: "I love this book!",
+         author: "fender707@rambler.ru"
+      },
+      {
+         stars: 4,
+         body: "So Nice book!",
+         author: "fender707@rambler.gu"
+      }
+    ]
+
+    },
+
+
+
+    { name: 'The Tell-Tale Heart',
+      author: 'Edgar Allan Poe',
+      rating: '4/5',
+      description: 'John Barleycorn is an autobiographical novel by Jack London dealing with his enjoyment of drinking and struggles with alcoholism. It was published in 1913. The title is taken from the British folksong "John Barleycorn".',
+      images: 'img/Poe1.jpg',
+      reviews: [
+      {
+         stars: 5,
+         body: "I love this book!",
+         author: "fender707@rambler.ru"
+      },
+      {
+         stars: 4,
+         body: "So Nice book!",
+         author: "fender707@rambler.gu"
+      }
+    ]
+
+
+    }];
+

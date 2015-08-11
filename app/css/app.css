@@ -1,0 +1,22 @@
+/* app css stylesheet */
+
+.menu,h1 {
+  text-align: center;
+  
+  }
+
+.nav ul {
+  text-align: center;
+  }
+
+.formReview {
+   display: block;
+ }
+
+.reviewHistory {
+   margin: 2;
+}
+
+.inline_h4 {
+  display: inline;
+}
